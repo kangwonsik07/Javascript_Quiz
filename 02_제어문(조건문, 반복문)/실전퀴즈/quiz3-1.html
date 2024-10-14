@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script></script>
-</body>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const a = Number(prompt('첫번째 숫자를 입력하세요'))
+         const b = Number(prompt('두번째 숫자를 입력하세요'))
+         const c = Number(prompt('세번째 숫자를 입력하세요'))
+
+         if (a > b && a > c) {
+            document.write(`최댓값: ${a}`)
+            document.write(`<br>`)
+
+            if (b > c) {
+               document.write(`최솟값: ${c}`)
+            } else {
+               document.write(`최댓값: ${b}`)
+            }
+         } else if (b > a && b > c) {
+            document.write(`최댓값: ${b}`)
+            document.write(`<br>`)
+
+            if (a > c) {
+               document.write(`최솟값: ${c}`)
+            } else {
+               document.write(`최솟값: ${a}`)
+            }
+         } else if (c > a && c > b) {
+            document.write(`최댓값: ${c}`)
+            document.write(`<br>`)
+
+            if (a > b) {
+               document.write(`최솟값: ${b}`)
+            } else {
+               document.write(`최솟값: ${a}`)
+            }
+         }
+         document.write(`<br>`)
+
+         let sum1 = a + b + c
+         document.write(`합계: ${sum1}`)
+         document.write(`<br>`)
+         document.write(`평균: ${sum1 / 3}`)
+      </script>
+   </body>
 </html>
