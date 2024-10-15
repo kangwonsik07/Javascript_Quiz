@@ -7,6 +7,13 @@
    </head>
    <body>
       <script>
+         function sumAll(...items) {
+            let output = 0
+            for (item of items) {
+               output += item
+            }
+            return output
+         }
          console.log(sumAll(1, 2, 3))
          console.log(sumAll(1, 2, 3, 4, 5))
          console.log(sumAll(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
