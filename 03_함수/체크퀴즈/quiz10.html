@@ -6,6 +6,16 @@
       <title>Document</title>
    </head>
    <body>
-      <script></script>
+      <script>
+         const names = ['이', '김', '박', '김', '정', '김']
+
+         let name = names.filter((value) => {
+            if (value == '김') {
+               return value
+            }
+         })
+
+         console.log(name)
+      </script>
    </body>
 </html>
