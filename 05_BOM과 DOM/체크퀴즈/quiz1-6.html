@@ -8,6 +8,13 @@
    <body>
       <h1>이미지</h1>
       <div class="list"></div>
-      <script></script>
+      <script>
+         const b = document.querySelector('.list')
+         const a = document.createElement('img')
+
+         a.setAttribute('src', 'https://picsum.photos/300/300')
+         a.setAttribute('alt', '이미지')
+         b.appendChild(a)
+      </script>
    </body>
 </html>

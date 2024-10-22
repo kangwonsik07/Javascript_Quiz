@@ -10,6 +10,32 @@
       <script>
          const height = 180
          const weight = 80
+
+         const goodweight = (height) => {
+            return (height - 100) * 0.9
+         }
+
+         const BMI = (height, weight) => {
+            const bmi = weight / ((height * height) / 10000)
+            let result = '없음'
+            if (bmi <= 20) {
+               result = '저체중'
+               return result
+            } else if (bmi <= 25) {
+               result = '정상'
+               return result
+            } else if (bmi <= 29) {
+               result = '과체중'
+               return result
+            } else if (bmi <= 39) {
+               result = '비만'
+               return result
+            } else {
+               result = '고도비만 '
+               return result
+            }
+         }
+         document.write(`적정 몸무게 ${goodweight(height)}, 체질량 지수: ${BMI(height, weight)}`)
       </script>
    </body>
 </html>

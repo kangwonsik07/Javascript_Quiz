@@ -10,6 +10,16 @@
       <script>
          var num1 = Number(prompt('숫자 입력', 0))
          var num2 = Number(prompt('숫자 입력', 0))
+
+         const add = (a, b) => a + b
+         const sub = (a, b) => a - b
+         const division = (a, b) => a / b
+         const multiple = (a, b) => a * b
+
+         document.write(`덧셈 ${add(num1, num2)}<br>`)
+         document.write(`뺄셈 ${sub(num1, num2)}<br>`)
+         document.write(`나누기 ${division(num1, num2)}<br>`)
+         document.write(`곱하기 ${multiple(num1, num2)}`)
       </script>
    </body>
 </html>

@@ -8,6 +8,12 @@
    <body>
       <input type="text" id="myInput" placeholder="텍스트를 입력하세요" />
       <p></p>
-      <script></script>
+      <script>
+         const text = document.querySelector('#myInput')
+
+         text.addEventListener('keyup', () => {
+            console.log(text.value)
+         })
+      </script>
    </body>
 </html>
