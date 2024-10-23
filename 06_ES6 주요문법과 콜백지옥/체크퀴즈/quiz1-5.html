@@ -8,10 +8,12 @@
    <body>
       <script>
          const originalArray = [1, 2, 3]
-         const copiedArray = originalArray
+         const copiedArray = [...originalArray]
          copiedArray.push(4)
          console.log(originalArray)
          console.log(copiedArray)
+
+         // const copiedArray = originalArray 코드가 얕은 복사가 되기 때문에 originalArray에도 4가 추가된다
       </script>
    </body>
 </html>

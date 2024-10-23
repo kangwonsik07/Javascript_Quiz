@@ -7,13 +7,21 @@
    </head>
    <body>
       <script>
+         function test() {
+            return new Promise((resolve, reject) => {
+               setTimeout(() => {
+                  console.log('저는')
+                  resolve('하니입니다')
+               }, 2000)
+            })
+         }
+
+         test().then((result) => {
+            console.log(result)
+            return result
+         })
+
          console.log('안녕하세요')
-
-         setTimeout(() => {
-            console.log('저는')
-         }, 1000)
-
-         console.log('하니입니다.')
       </script>
    </body>
 </html>

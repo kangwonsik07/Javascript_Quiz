@@ -9,11 +9,17 @@
       <script>
          console.log('안녕하세요')
 
-         setTimeout(() => {
-            console.log('저는')
-         }, 1000)
+         function back(calback) {
+            setTimeout(() => {
+               console.log('저는')
+               calback()
+            }, 1000)
+         }
 
-         console.log('하니입니다.')
+         back(() => {
+            console.log('하니입니다.')
+         })
+         // 콜백함수는 함수의 매개변수로 호출되는 함수로 비동기 작업(setTimeout함수)후 특정 작업(함수 호출)실행
       </script>
    </body>
 </html>

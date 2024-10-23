@@ -18,9 +18,16 @@
             })
          }
 
-         asynFunc().then((result) => {
-            console.log(result)
-         })
+         async function runasynFunc() {
+            try {
+               const result = await asynFunc()
+               console.log(result)
+            } catch (error) {
+               console.error(error)
+            }
+         }
+         runasynFunc()
+         // promise문을 쓸때 then을 너무 많이 사용하면 가독성이 떨어지므로 async, await를 섞어서 사용
       </script>
    </body>
 </html>
