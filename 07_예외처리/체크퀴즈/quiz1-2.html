@@ -7,7 +7,15 @@
    </head>
    <body>
       <script>
-         console.log(num)
+         try {
+            console.log(num) //에러발생 위치, 이유: num 변수를 선언하지 않았음
+         } catch (error) {
+            console.log(error.name)
+            console.log(error.message)
+            console.log(error)
+         }
+
+         // console.log에서 예외 발생 num이 정의 되지 않았기 때문에
       </script>
    </body>
 </html>

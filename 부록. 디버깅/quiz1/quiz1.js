@@ -6,3 +6,4 @@ for (let i = 1; i <= 100; i++) {
 }
 
 console.log('합계', sum)
+// i=33일때 sum=5610

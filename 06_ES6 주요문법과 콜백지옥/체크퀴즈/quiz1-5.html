@@ -8,12 +8,14 @@
    <body>
       <script>
          const originalArray = [1, 2, 3]
+
          const copiedArray = [...originalArray]
          copiedArray.push(4)
          console.log(originalArray)
          console.log(copiedArray)
 
          // const copiedArray = originalArray 코드가 얕은 복사가 되기 때문에 originalArray에도 4가 추가된다
+         // originalArray와 copiedArray가 같은 메모리주소를 가지고 있기 때문이다. 스택에서는 주소가 저장이 되어있고 실제 값은 메모리 주소를 따라 힙으로 가야 해당 주소에 저장이 되어있다
       </script>
    </body>
 </html>

@@ -33,7 +33,7 @@ setInterval(function () {
       return
    }
    y = Math.sin(x / 50) * 100 + offsetY
-
+   //y=447.92
    ctx.lineTo(x, y)
    ctx.stroke()
 

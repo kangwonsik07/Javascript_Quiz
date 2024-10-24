@@ -10,7 +10,15 @@
          let arr = []
          try {
             console.log(str.length)
-         } catch (exception) {}
+         } catch (exception) {
+            arr.push(1)
+            arr.push(2)
+            arr.push(3)
+         } finally {
+            console.log(arr)
+         }
+
+         // console.log에서 예외 발생 str가 빈 비열이라서 길이가 없다
       </script>
    </body>
 </html>

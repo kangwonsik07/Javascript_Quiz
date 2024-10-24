@@ -14,12 +14,13 @@
                   const a = 1
                   const b = 2
                   const result = a + b
+                  // 현재 여기까지 promise 상태는 대기상태
 
                   if (result > 10) {
-                     resolve('result는 10보다 큽니다')
+                     resolve('result는 10보다 큽니다') // 대기 -> 이행
                      // 대기 -> 이행으로 변경
                   } else {
-                     reject('result는 10보다 작습니다')
+                     reject('result는 10보다 작습니다') // 대기 -> 거부
                      // 대기 -> 거부로 변경 result가 10보다 작아서 false
                   }
                }, 1000)
@@ -29,8 +30,10 @@
          asyncTask()
             .then((result) => {
                console.log(result)
+               // promise상태가 이행으로 바뀌면 then 살행
             })
             // 거부로 변경되서 에러가 뜬다
+            // promise 상태가 거부로 변경되면 error실행
             .catch((error) => {
                console.error(error)
             })

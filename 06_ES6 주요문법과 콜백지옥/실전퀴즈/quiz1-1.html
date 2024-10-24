@@ -8,6 +8,8 @@
    <body>
       <script>
          function test() {
+            // 사용하지 않으면 reject 생략 가능
+            // 비동기를 유발하는 코드 작성 -> 비동기 코드를 실행후에 동기적으로 바꿔줌(then)
             return new Promise((resolve, reject) => {
                setTimeout(() => {
                   console.log('저는')
